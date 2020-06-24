@@ -15,7 +15,11 @@ class MyStatelessWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Show Alert Box'),
+        elevation: 0.0,
+//        automaticallyImplyLeading: false,
+        title: Text('Dialogue Box',
+            style: TextStyle(color: Colors.white, fontSize: 20)),
+        backgroundColor: Color(0xFF333333),
       ),
 
       body: Center(
