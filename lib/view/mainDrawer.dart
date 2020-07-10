@@ -26,7 +26,7 @@ class MainDrawer extends StatelessWidget {
                   ),
                   ),
                   SizedBox(height: 10,),
-                  Text('Muhammaed',
+                  Text('Muhammad',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,

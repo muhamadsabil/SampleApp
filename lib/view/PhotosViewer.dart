@@ -3,7 +3,6 @@ import 'package:newbloodstore1flutterapp/models/ClocloCategories.dart';
 import 'package:newbloodstore1flutterapp/blocs/ClocloPhotosBloc.dart';
 import 'package:newbloodstore1flutterapp/models/ApiResponses.dart';
 import 'package:newbloodstore1flutterapp/models/Photos.dart';
-import 'package:newbloodstore1flutterapp/blocs/JockerCategoryBloc.dart';
 
 class PhotosViewer extends StatefulWidget {
   final ClocloCategories clocloCategories;
@@ -20,12 +19,10 @@ class _PhotosViewerState extends State<PhotosViewer> {
   int _currentIndex = 0;
 
   ClocloPhotosBloc _bloc;
-  JockerCategoryBloc _blocJocker;
 
   void initState() {
     super.initState();
     _bloc = ClocloPhotosBloc();
-    _blocJocker = JockerCategoryBloc();
   }
 
   @override
