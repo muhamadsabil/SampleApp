@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newbloodstore1flutterapp/view/GetJockerCategories.dart';
-import 'SideBar/mainDrawer.dart';
+import 'view/mainDrawer.dart';
 import 'view/PhotosViewer.dart';
+import 'view/PlpViewer.dart';
 class SideBarHome extends StatefulWidget {
   @override
   _SideBarHomeState createState() => _SideBarHomeState();
