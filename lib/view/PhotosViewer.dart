@@ -83,9 +83,10 @@ class _PhotosViewerState extends State<PhotosViewer> {
 class ClocloApp extends StatelessWidget {
 
   final List<Results> photosList;
+  final List<Urls> photosUrls;
 //  int _currentIndex = 0;
 
-  const ClocloApp({Key key, this.photosList}) : super(key: key);
+  const ClocloApp({Key key, this.photosList,this.photosUrls}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,7 +139,7 @@ class ClocloApp extends StatelessWidget {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
-                                  image: NetworkImage(photosList[index].toString()),
+                                  image: NetworkImage(photosList[index].urls.raw),
                                   fit: BoxFit.fitWidth)),
                         ),
                         Row(
@@ -171,7 +172,7 @@ class ClocloApp extends StatelessWidget {
             ),
           );
         },
-        itemCount: photosList.length,
+        itemCount: photosList.map((photos) => photos.urls.raw).length,
         physics: ClampingScrollPhysics(),
         scrollDirection: Axis.vertical,
         addAutomaticKeepAlives: false,
