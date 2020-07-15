@@ -4,82 +4,50 @@ class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
+      child: ListView(
         children: <Widget>[
-          Container(
-            width: double.infinity,
-            padding: EdgeInsets.all(20),
-            color: Theme.of(context).primaryColor,
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    margin: EdgeInsets.only(top: 20),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(image: AssetImage('assets/images-6.jpeg'),
-                        fit: BoxFit.fill,
+          new UserAccountsDrawerHeader(accountName: Text('Muhamad sabil'), accountEmail: Text('sabilkaruvatt@gmail.com'),
+          currentAccountPicture: GestureDetector(
+            child: new CircleAvatar(
+              backgroundColor: Colors.grey,
+              child: Icon(Icons.person,color: Colors.white,),
+            ),
+          ),),
 
-                    ),
-                  ),
-                  ),
-                  SizedBox(height: 10,),
-                  Text('Muhammad',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-
-                  ),),
-                  Text('sabilkaruvatt@gmail.com',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-
-                    ),),
-
-                ],
-
+          ListTile(
+            leading: Icon(Icons.person),
+            onTap: () {
+              Navigator.pushNamed(context, 'SignIn');
+            },
+            title: Text(
+              'SignIn',
+              style: TextStyle(
+                fontSize: 20,
               ),
             ),
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            onTap: (){
-              Navigator.pushNamed(context, 'SignIn');
-            },
-            title: Text('SignIn',
-              style: TextStyle(
-                fontSize: 20,
-
-              ),),
-          ),
-          ListTile(
             leading: Icon(Icons.apps),
-            onTap: (){
+            onTap: () {
               Navigator.pushNamed(context, 'SignUp');
             },
-            title: Text('SignUp',
+            title: Text(
+              'SignUp',
               style: TextStyle(
                 fontSize: 20,
-
-              ),),
+              ),
+            ),
           ),
           ListTile(
             leading: Icon(Icons.assignment),
-            onTap: (){},
-            title: Text('Assignment',
+            onTap: () {},
+            title: Text(
+              'Assignment',
               style: TextStyle(
                 fontSize: 20,
-
-              ),),
-
+              ),
+            ),
           ),
-
-
         ],
       ),
     );

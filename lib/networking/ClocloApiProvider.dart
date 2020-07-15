@@ -5,15 +5,15 @@ import 'dart:convert';
 import 'dart:async';
 
 class ClocloApiProvider {
-  final String _baseUrl = "https://api.unsplash.com/search/photos?query=canada&client_id=nfvjQTV-AwYW1LEe-tQEVcNZDZbyCXVKRj4zhOXhpqo";
+  final String _baseUrl = "https://api.unsplash.com/";
 
   Future<dynamic> get(String url) async {
     var responseJson;
     try {
-      final response = await http.get(_baseUrl);
+      final response = await http.get(_baseUrl + url);
       responseJson = _response(response);
     } on SocketException {
-      throw FetchDataException('No Internet connection');
+      throw FetchDataException('---No Internet connection---');
     }
     return responseJson;
   }

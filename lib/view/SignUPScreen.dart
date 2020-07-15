@@ -86,7 +86,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 60,
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'sideBarHome');
+                    Navigator.pushNamed(context, 'clocloApp');
                   },
                   color: Color(0xFF00a79B),
                   child: Text(

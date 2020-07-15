@@ -1,4 +1,3 @@
-import 'package:newbloodstore1flutterapp/networking/ApiBaseHelper.dart';
 import 'package:newbloodstore1flutterapp/models/Photos.dart';
 import 'package:newbloodstore1flutterapp/networking/ClocloApiProvider.dart';
 
@@ -11,7 +10,7 @@ class ClocloCategoryRepository {
   ClocloApiProvider _helper = ClocloApiProvider();
 
   Future<List<Results>> fetchClocloPhotosList() async {
-    final response = await _helper.get("photos?query=canada&client_id=$_client_id");
+    final response = await _helper.get("search/photos?query=person&client_id=$_client_id");
     return Photos.fromJson(response).results;
   }
 }

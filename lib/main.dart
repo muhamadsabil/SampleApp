@@ -2,11 +2,7 @@
 import 'package:flutter/material.dart';
 import 'view/SignInScreen.dart';
 import 'view/SignUPScreen.dart';
-import 'SampleAppHomePage.dart';
-import 'view/alertBox.dart';
-
-import 'networking/ApiBaseHelper.dart';
-import 'view/PhotosViewer.dart';
+import 'view/ClocloApp.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sign Up Screen ',
+      title: 'Sign Up Screen',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.teal,
@@ -23,9 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         'SignIn':(context)=>SignInScreen(),
         'SignUp':(context)=>SignUpScreen(),
-        'sideBarHome':(context)=>SideBarHome(),
-        'alertBox':(context)=>AlertBox(),
-        'photosViewer':(context)=>PhotosViewer()
+        'clocloApp':(context)=>ClocloApp(),
       },
     );
   }

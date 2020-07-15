@@ -19,6 +19,7 @@ class ClocloPhotosBloc {
     _clocloListController = StreamController<ApiResponse<List<Results>>>();
     _clocloRepository = ClocloCategoryRepository();
     fetchClocloPhotosList();
+//  fetchClocloPrifilePhoto();
   }
 
   fetchClocloPhotosList() async {
@@ -31,6 +32,7 @@ class ClocloPhotosBloc {
       print(e);
     }
   }
+
 
   dispose() {
     _clocloListController?.close();
