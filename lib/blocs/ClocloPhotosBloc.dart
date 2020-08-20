@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:newbloodstore1flutterapp/models/Photos.dart';
 import 'package:newbloodstore1flutterapp/repository/ClocloCategoryRepo.dart';
 import 'package:newbloodstore1flutterapp/models/ApiResponses.dart';
@@ -19,7 +18,6 @@ class ClocloPhotosBloc {
     _clocloListController = StreamController<ApiResponse<List<Results>>>();
     _clocloRepository = ClocloCategoryRepository();
     fetchClocloPhotosList();
-//  fetchClocloPrifilePhoto();
   }
 
   fetchClocloPhotosList() async {

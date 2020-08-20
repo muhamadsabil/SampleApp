@@ -1,8 +1,6 @@
 import 'package:newbloodstore1flutterapp/models/Photos.dart';
 import 'package:newbloodstore1flutterapp/networking/ClocloApiProvider.dart';
-
 import 'dart:async';
-
 
 class ClocloCategoryRepository {
   final String _client_id = "nfvjQTV-AwYW1LEe-tQEVcNZDZbyCXVKRj4zhOXhpqo";

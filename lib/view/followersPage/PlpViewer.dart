@@ -21,11 +21,15 @@ class _PlpViewerState extends State<PlpViewer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Photos stuff',
+        leading: Text('MoZGram', style: TextStyle(
+            color: Colors.teal
+        ),),
+        title: Text('My Followers',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: "roman",
             fontSize: 20,
+
           ),),),
       backgroundColor: Colors.white12,
       body: RefreshIndicator(
@@ -87,12 +91,12 @@ class _ProductsState extends State<Products> {
               onTap: () {},
               child: GridTile(
                 footer: Container(
-                  color: Colors.white12,
+                  color: Colors.black12,
                   child: ListTile(
                     leading: Text(
                       widget.list_item[index].user.name.toString(),
                       style: TextStyle(fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                      color: Colors.white),
                     ),
                   ),
                 ),

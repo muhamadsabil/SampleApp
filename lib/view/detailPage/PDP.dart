@@ -1,10 +1,18 @@
+
 import 'package:flutter/material.dart';
+//import 'package:newbloodstore1flutterapp/view/CartPageView.dart';
 
 class PDPViewer extends StatefulWidget {
+
+  final userImage;
+  final firstName;
+  final location;
+
+  PDPViewer({Key key, this.userImage, this.firstName,this.location}) : super(key: key);
+
   @override
   _PDPViewerState createState() => _PDPViewerState();
 }
-
 class _PDPViewerState extends State<PDPViewer> {
   @override
   Widget build(BuildContext context) {
@@ -25,27 +33,33 @@ class _PDPViewerState extends State<PDPViewer> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Image.network(
-                    'https://chkokkobanners.azureedge.net/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/_/1_6.jpg'),
+                Image.network(widget.userImage),
                 SizedBox(height: 15,),
                 Row(
                   children: <Widget>[
-                    Text('Product title',style: TextStyle(
+                    Text(widget.firstName.toString(),style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto'
                     ),),
-                    SizedBox(width: 140,),
-                    Text('AED 457',style: TextStyle(
+                    SizedBox(width: 50,),
+                    Text('AED 662',style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Roboto',
+                    ),),
+                    SizedBox(width: 10,),
+                    Text('AED 799',style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
                         color: Colors.redAccent,
+                        decoration: TextDecoration.lineThrough
                     ),)
                   ],
                 ),
                 SizedBox(height: 10,),
-                Text('Product subtitle.......',style: TextStyle(
+                Text(widget.location.toString(),style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w300,
                     fontFamily: 'Roboto'
@@ -110,6 +124,8 @@ class _PDPViewerState extends State<PDPViewer> {
                     height: 60,
                     color: Colors.teal,
                     onPressed: (){},
+
+
                     child: Text(
                       'Add to cart',
                       style: TextStyle(

@@ -1,8 +1,12 @@
 
 import 'package:flutter/material.dart';
-import 'view/SignInScreen.dart';
-import 'view/SignUPScreen.dart';
-import 'view/ClocloApp.dart';
+import 'view/registration/SignInScreen.dart';
+import 'view/registration/SignUPScreen.dart';
+import 'view/bottomNav/ClocloApp.dart';
+import 'package:newbloodstore1flutterapp/view/accountPage/AccountPage.dart';
+
+import 'DataBase_Repo/db_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,6 +24,8 @@ class MyApp extends StatelessWidget {
         'SignIn':(context)=>SignInScreen(),
         'SignUp':(context)=>SignUpScreen(),
         'clocloApp':(context)=>ClocloApp(),
+        'db_page':(context)=>DBTestPage(),
+        'accountpage':(context)=>MyAccount(),
       },
     );
   }
